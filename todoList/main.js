@@ -1,32 +1,42 @@
+var listItems = [];
+
 $("#add").click(function() {
     var newValue;
     newValue = $('#newtodo').val();
-    $('#newtodo').val('');
-    $('#container').append('<div id="'+newValue+'"> <input type="checkbox" id="'+newValue+'"> <span id="'+newValue+'">'+ newValue +'</span> <br> </div>');
-      
-    $('#' + newValue).on('click', function() {
-        $('#' + newValue).remove();
-    });
+    if(newValue != "") {
+      listItems.push(newValue);
+      $('#newtodo').val('');
+      renderJSON(listItems);
+      save();
+    }
 });
 
+function renderJSON(data) {
+  $('#container').empty();
+  for(i = 0; i < data.length; i++) {
+    var valueToAdd = data[i];
+    $('#container').append('<div id="'+valueToAdd+'"> <input type="checkbox" id="'+valueToAdd+'"> <span id="'+valueToAdd+'">'+ valueToAdd +'</span> <br> </div>');  
+    $('#' + valueToAdd).on('click', function() {
+        var myid=$(this).attr("id");
+        //$(this).remove();
+        //debugger;
+        var index = listItems.indexOf(myid);
+        if (index > -1) {
+          listItems.splice(index, 1);
+        }
+        renderJSON(listItems);
+        save();
+    });
+  }
+}
 
-//	<script>
-//      $("#add").click(function() {
-        //newValue = document.getElementById("newtodo").value;
-//        var newValue;
-//        newValue = $('#newtodo').val();
-        //document.getElementById("newtodo").value += newValue;
-//        $('#newtodo').val('');
-//        $('#container').append('<div id="'+newValue+'"> <input type="checkbox" id="'+newValue+'"> <span id="'+newValue+'">'+ newValue +'</span> <br> </div>');
-      
-//        $('#' + newValue).on('click', function() {
- //             $('#' + newValue).remove();
-//        });
+function save() {
+  localStorage.myData = JSON.stringify(listItems);
+}
 
+function load() {
+  listItems = JSON.parse(localStorage.myData);
+  renderJSON(listItems);
+}
 
-      //    $('#' + newValue).on('click', function() {
-      //    $('#' + newValue).remove();
-      //    $('span[id="'+newValue+'"]').remove();
-      //  });
-//      });
-//    </script>
+load();
