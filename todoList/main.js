@@ -31,12 +31,23 @@ function renderJSON(data) {
 }
 
 function save() {
-  localStorage.myData = JSON.stringify(listItems);
+  //localStorage.myData = JSON.stringify(listItems);
+  $.ajax({
+      url: 'http://datastore.asadmemon.com/shahzeb', 
+      type: 'POST', 
+      contentType: 'application/json', 
+      data: JSON.stringify(listItems),
+      success:function(res){console.log(res);}
+  });
 }
 
 function load() {
-  listItems = JSON.parse(localStorage.myData);
-  renderJSON(listItems);
+  //listItems = JSON.parse(localStorage.myData);
+  $.get('http://datastore.asadmemon.com/shahzeb',function(res){
+    console.log(res);
+    listItems = res;
+    renderJSON(listItems);
+  });
 }
 
-load();
+load(); 
