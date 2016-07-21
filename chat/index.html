@@ -10,7 +10,17 @@
       			font-weight: bolder;
       		}
 		</style>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
+		<script>
+  			// Initialize Firebase
+  			var config = {
+    		apiKey: "AIzaSyB86lTF9H1pb2NyerkgnD0jqe3cfW84Ba4",
+    		authDomain: "socpakistan-76b03.firebaseapp.com",
+    		databaseURL: "https://socpakistan-76b03.firebaseio.com",
+    		storageBucket: "socpakistan-76b03.appspot.com",
+  			};
+ 			firebase.initializeApp(config);
 		</script>
 	</head>
 	<body>
@@ -22,6 +32,6 @@
 			<input  size="61" type="text" id="newMsg" > 
 			<input type="submit" value="Send" id="send"><br>
 		</div>
-		<script src="main.js"></script>    
+		<script src="mainfb.js"></script>    
 	</body>
 </html>

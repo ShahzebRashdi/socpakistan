@@ -1,0 +1,78 @@
+			body
+			{
+				font-family: Stellar;
+				font-size: 250%;
+				background-color: #00a885;
+			}
+
+			#topic {
+				background-color: #d1d5d8; 
+				width:35%;
+				height:30%;
+				color: #3a3a3a;
+				border-radius:7px;
+			}
+
+			input[type="text"]
+			{
+				color:black;
+				margin-top:8px;
+				font-size:15px;
+				border:2px solid gray;
+				padding:10px;
+				background-color:white;
+				box-sizing: border-box;
+			}
+
+			input[type="email"], input[type="password"], select
+			{
+				width:70%;
+				color:black;
+				margin-top:8px;
+				font-size:15px;
+				border:2px solid gray;
+				padding:10px;
+				background-color:white;
+				box-sizing: border-box;	
+			}
+
+
+			textarea
+			{
+				width:40%;
+				height:18%;
+				color:black;
+				margin-top:8px;
+				font-size:15px;
+				border:2px solid gray;
+				padding:10px;
+				background-color:white;
+				box-sizing: border-box;	
+			}
+
+			input[type="submit"], input[type="reset"]
+			{
+				margin-top: 8px;
+				padding:15px;
+				color: white;
+				background-color:#e14938;
+				border: 1px solid #b8312f;
+   			    border-width: 1px 1px 4px;
+   			    border-radius: 7px;
+			}
+
+			input[type="submit"]:hover, input[type="reset"]:hover
+			{
+				background-color:#b8312f;
+				cursor: hand;
+			}
+
+			label {
+				font-family: Stellar;
+				font-size: 75%;
+			}
+
+			span.required
+			{
+				color: #e14938;
+			}

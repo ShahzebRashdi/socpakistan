@@ -1,6 +1,5 @@
 var msgs = [];
 var username = "";
-var timer;
 
 function joinedAlert() {
 	username = prompt("Please enter your name");

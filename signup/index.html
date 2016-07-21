@@ -1,0 +1,78 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css"> 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+		</script>
+	</head>
+	<body align=center>
+		<div id="signin" >
+			<div id="header">
+				<br>
+				SIGN IN
+				<div id="fill">
+					<input type="email" id="userEmail" name="email" placeholder="Email Address" required/>
+					<br>
+					<input type="password" id="userPassword" name="password" placeholder="Password" required/>
+					<br>
+					<input type="submit" id="signinButton" value="Sign In" />
+					<br>
+				</div>
+			</div>
+		</div>
+		<br>
+
+		<div id="form" >
+			<div id="topPanel">
+				<br>
+				<img src="ieee logo.png" width=15% align=left>
+			</div>
+			<div id="header">
+				<br><br>
+				<img src="icon.png" width=12%>
+				<br>
+				Registration
+			</div>
+			<div id="fill">
+					<label>Full Name <span class="required">*</span></label>
+					<br>
+					<input type="text" id="fName" name="firstName" placeholder="First Name" required/>
+					<input type="text" id="lName" name="lastName" placeholder="Last Name" required/>
+					<br>
+					<label>Email  <span class="required">*</span></label>
+					<br>
+					<input type="email" id="email" name="email" placeholder="Email Address" required/>
+					<br>
+					<label>Password  <span class="required">*</span></label>
+					<br>
+					<input type="password" id="password" name="password" placeholder="Password" required/>
+					<br>
+					<label>Join as</label>
+					<br>
+					<select name="join" class="field-select" id="join">
+   		     		<option value="Student">Student</option>
+    	   	 		<option value="Professional">Professional</option>
+			        </select>
+					<br>
+					<label>Why do you want to join IEEE?</label>
+					<br>
+					<textarea name="reason" id="comment"></textarea>
+					<br>
+					<input type="submit" id="submit" value="Register" />
+					<input type="reset" value="Reset" />
+			</div>
+		</div>
+		<br>
+
+		<div id="healthwindow">
+			<div id="header">
+				<br>
+				PLAYERS' HEALTH
+				<br><br>
+				<div id="health">
+				</div>
+			</div>
+		</div>
+		<br>
+		<script src="main.js"></script>    
+	</body>
+</html>

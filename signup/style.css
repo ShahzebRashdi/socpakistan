@@ -1,0 +1,104 @@
+			body
+			{
+				background-color: #00a885;
+			}
+
+			#form
+			{
+				margin-left: 24%;
+				background-color: #d1d5d8; 
+				width:50%;
+				height:100%;
+				color: #3a3a3a;
+				border-radius:7px;
+			}
+
+			#signin, #healthwindow
+			{
+				margin-left: 24%;
+				background-color: #d1d5d8; 
+				width:50%;
+				height:35%;
+				color: #3a3a3a;
+				border-radius:7px;
+			}
+
+			#topPanel
+			{
+				margin-left: 5%;
+			}
+
+			#header
+			{
+				font-family: ONRAMP;
+				font-size: 200%;
+			}
+
+			#fill
+			{
+				text-align: left;
+				margin-left: 20%;
+				font-family: Stellar;
+				font-size: 18;
+			}
+
+			input[type="text"]
+			{
+				width:35%;
+				color:black;
+				margin-top:8px;
+				font-size:15px;
+				border:2px solid gray;
+				padding:10px;
+				background-color:white;
+				box-sizing: border-box;
+			}
+
+			input[type="email"], input[type="password"], select
+			{
+				width:70%;
+				color:black;
+				margin-top:8px;
+				font-size:15px;
+				border:2px solid gray;
+				padding:10px;
+				background-color:white;
+				box-sizing: border-box;	
+			}
+
+
+			textarea
+			{
+				width:70%;
+				height:18%;
+				color:black;
+				margin-top:8px;
+				font-size:15px;
+				border:2px solid gray;
+				padding:10px;
+				background-color:white;
+				box-sizing: border-box;	
+			}
+
+			input[type="submit"], input[type="reset"]
+			{
+				margin-top: 8px;
+				width:35%;
+				padding:15px;
+				color: white;
+				background-color:#e14938;
+				border: 1px solid #b8312f;
+   			    border-width: 1px 1px 4px;
+   			    border-radius: 7px;
+			}
+
+			input[type="submit"]:hover, input[type="reset"]:hover
+			{
+				background-color:#b8312f;
+				cursor: hand;
+			}
+
+			span.required
+			{
+				color: #e14938;
+			}
