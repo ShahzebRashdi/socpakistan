@@ -1,0 +1,13 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<% if (!user) { %>
+	<p>Welcome! Please <a href="/login">log in</a>.</p>
+<% } else { %>
+	<p>Hello, <%= user.username %>. View your <a href="/profile">profile</a>.</p>
+	TO DO LIST <br>
+	<input type="text" id="newtodo" > <br>
+    <input type="submit" value="add" id="add"> <br>
+    <div id="container">
+    </div>
+    <script src="main.js"></script>  
+<% } %>

@@ -1,0 +1,15 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<div id="container">
+		</div>
+		<script>
+			$.get('/time',function(res){
+    			console.log(new Date(res.time));
+    			$('#container').append(new Date(res.time));
+  			});
+		</script>
+	</body>
+</html>
