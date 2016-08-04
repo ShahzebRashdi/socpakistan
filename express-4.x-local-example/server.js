@@ -41,9 +41,6 @@ passport.deserializeUser(function(id, cb) {
   });
 });
 
-
-
-
 // Create a new Express application.
 var app = express();
 app.use(express.static('public'));
