@@ -31,7 +31,7 @@ passport.use(new Strategy(
 // serializing, and querying the user record by ID from the database when
 // deserializing.
 passport.serializeUser(function(user, cb) {
-  cb(null, user.id);
+  cb(null, user._id);
 });
 
 passport.deserializeUser(function(id, cb) {
@@ -98,6 +98,21 @@ app.get('/getTodo', function (req, res) {
 app.post('/setTodo', function (req, res) {
   var userjson = req.body;
   db.users.setTodoListByUsername(req.user.username, userjson);
+});
+
+app.get('/signup',
+  function(req, res){
+    res.render('signup');
+  });
+
+app.post('/signup', function (req, res) {
+  var signupdata = req.body;
+  res.redirect('/');
+  var username = signupdata.username;
+  var password = signupdata.password;
+  var displayname = signupdata.displayname;
+  db.users.insertUser(username, password, displayname);
+  console.log(signupdata.username);
 });
 
 app.listen(3000);
